@@ -15,8 +15,16 @@
     <name>ConsumerService</name>
     <description>ConsumerService</description>
 
+    <distributionManagement>
+        <repository>
+            <id>kafka-library</id>
+            <url>http://localhost:8081/repository/kafka-library/</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <java.version>17</java.version>
+        <kafka_library_version>1.0.3</kafka_library_version>
     </properties>
 
     <dependencies>
@@ -51,6 +59,11 @@
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ru.zhukov</groupId>
+            <artifactId>kafka-library</artifactId>
+            <version>${kafka_library_version}</version>
         </dependency>
     </dependencies>
 
